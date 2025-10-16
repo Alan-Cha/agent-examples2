@@ -94,8 +94,8 @@ class BearerAuthBackend(AuthenticationBackend):
             # decode and validate claims
             claims = jwt.decode(s=token, key=jwks, claims_options=self.claims_options)
             
-            logger.info("Claims before validate: " + str(claims))
-            print("Claims before validate: " + str(claims))
+            logger.info("Claims from base before validate: " + str(claims))
+            print("Claims from base before validate: " + str(claims))
             
             claims.validate()
             logger.debug("Token successfully validated.")
